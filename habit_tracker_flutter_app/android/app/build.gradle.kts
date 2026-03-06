@@ -7,9 +7,12 @@ plugins {
 
 android {
     namespace = "com.example.habit_tracker_flutter_app"
-        ndkVersion = "27.0.12077973"
+
+    // Pin NDK to the highest required version (plugins require 27.0.12077973).
+    // NOTE: Do not override this with flutter.ndkVersion, otherwise the pinned version is ignored.
+    ndkVersion = "27.0.12077973"
+
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
